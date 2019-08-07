@@ -1,10 +1,13 @@
-# Grab API key from .env
-require 'dotenv'
-Dotenv.load
+if ENV["RACK_ENV"] == "development" || ENV["RACK_ENV"] == "test"
+  # Grab API key from .env
+  require 'dotenv'
+  Dotenv.load
+
+  require 'pry'
+end
 
 require 'sinatra/base'
 require 'httparty'
-# require 'pry'
 
 class App < Sinatra::Base
   get '/api/people' do
