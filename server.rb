@@ -10,6 +10,12 @@ require 'sinatra/base'
 require 'httparty'
 
 class App < Sinatra::Base
+  get '/' do
+    if ENV["RACK_ENV"] == "production"
+      send_file File.expand_path('index.html', settings.public_folder)
+    end
+  end
+
   get '/api/people' do
     response = HTTParty.get(
       "https://api.salesloft.com/v2/people.json",
