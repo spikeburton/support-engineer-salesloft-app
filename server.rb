@@ -13,16 +13,20 @@ class App < Sinatra::Base
       headers: { "Authorization" => "Bearer #{ENV['SALESLOFT_API_KEY']}"}
     )
 
-    payload = response["data"].collect do |user|
-      {
-        name: "#{user["first_name"]} #{user["last_name"]}",
-        email: user["email_address"],
-        title: user["title"]
-      }
-    end
+    if response.success?
+      payload = response["data"].collect do |user|
+        {
+          name: "#{user["first_name"]} #{user["last_name"]}",
+          email: user["email_address"],
+          title: user["title"]
+        }
+      end
 
-    # binding.pry
-    content_type :json
-    payload.to_json
+      # binding.pry
+      content_type :json
+      payload.to_json
+    else
+      halt 400, "Request failed"
+    end
   end
 end
