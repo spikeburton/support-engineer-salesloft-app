@@ -1,0 +1,20 @@
+{
+  "name": "support-engineer-salesloft-app",
+  "version": "1.0.0",
+  "description": "Sample app for SalesLoft API",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "rackup",
+    "client": "npm start --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spikeburton/support-engineer-salesloft-app.git"
+  },
+  "author": "Spike Burton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spikeburton/support-engineer-salesloft-app/issues"
+  },
+  "homepage": "https://github.com/spikeburton/support-engineer-salesloft-app#readme"
+}
