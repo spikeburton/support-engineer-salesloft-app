@@ -10,3 +10,5 @@ group :development, :test do
   gem "pry", "~> 0.12.2"
   gem "dotenv", "~> 2.7"
 end
+
+gem "httparty", "~> 0.17.0"
