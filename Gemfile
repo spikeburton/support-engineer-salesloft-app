@@ -11,4 +11,5 @@ group :development, :test do
   gem "pry", "~> 0.12.2"
   gem "dotenv", "~> 2.7"
   gem "rspec", "~> 3.8"
+  gem "rack-test", "~> 1.1"
 end
