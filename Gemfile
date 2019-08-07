@@ -10,4 +10,5 @@ gem "httparty", "~> 0.17.0"
 group :development, :test do
   gem "pry", "~> 0.12.2"
   gem "dotenv", "~> 2.7"
+  gem "rspec", "~> 3.8"
 end
