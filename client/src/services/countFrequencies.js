@@ -1,4 +1,7 @@
 export const countFrequencies = people => {
+  // Return an empty array if passed an empty list
+  if (!people) return [];
+
   const emails = [];
   const freq = {};
 
