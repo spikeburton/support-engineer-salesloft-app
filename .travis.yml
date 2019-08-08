@@ -1,14 +1,14 @@
 language: node_js
 node_js: node
 before_install:
-# - gem install bundler
+- gem install bundler
 - npm install -g npm
 install:
-# - bundle install
+- bundle install
 - npm install --prefix client
 script:
 - echo "Running tests..."
-# - bundle exec rspec
+- bundle exec rspec
 - npm run test --prefix client
 deploy:
   provider: heroku
@@ -17,3 +17,6 @@ deploy:
   app: support-engineer-spike-burton
   on:
     repo: spikeburton/support-engineer-salesloft-app
+env:
+  global:
+    secure: NCacLEJtSafqN/MB2L5h6NjFvGctcwNwPI00qa+/b7WHTJSh77x1tZs7DBZqfz20+k1k70MOvxsOF7zUc1FRtnWizWL70/2PAPOBNJh12F7qjj6ndEv0D6rYhaXcoOHpvSrFj3VfKNZdXoj7Ne/70v1lqWm7HxqkRyBW+IjcmOG7RuSP9P3BhlRQhbllx+KRWVSZbF1TnaTF548GvEZ9py7qEQDaw64m0U/92BAqWrB/QsgAvPAhqzlKnKxBljYQlub4sPJAaHJ9Mk948w5jkRHjYHxgpl4S6xy8fZCYPzSGsiHrkV+t6XjtESlCdn2Yyjg5TRb4GfvSkJ3gTFqJgKTP8smLTQoJm5NibRHZ9N0NtZEvQ191xBfVUnzV88B/NKeIbDq7JBZ8xzu3NEynl2CBGko3FCUZ/Ui2KdUubQhbIWBeH9/IZuHddfZ4cVCiGyFNHHybDUmIj514IkL0IZW9bleZHMHGyaVQRdnFHnjyu7HnQewd4sb8Er+HF4ur1SZOxcPYg9g/+CIjThbO0doaXB4Eqpa8nGU06gLqFRHg7HELDWW6TPY4SHQ5ghXRcOEfIhq/Hzaxb+q08Om0GR2Rs+2bj3csaTt3wOSfstJHt97QpILnmDh7pypFSNKbZOxLJob94h4hZj3awjup90StUvEcBRDZpiWuqmtXD8s=
