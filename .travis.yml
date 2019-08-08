@@ -3,12 +3,14 @@ rvm:
 - 2.6.3
 before_install:
 - gem install bundler
-# - npm install -g npm
+- npm install -g npm
 install:
 - bundle install
+# - npm install jest
 script:
 - echo "Running tests..."
 # - bundle exec rspec
+- npm run test --prefix client
 deploy:
   provider: heroku
   api_key:
