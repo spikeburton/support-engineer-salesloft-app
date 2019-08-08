@@ -1,3 +1,3 @@
-require_relative 'server/server'
+require_relative 'server'
 
 run App
