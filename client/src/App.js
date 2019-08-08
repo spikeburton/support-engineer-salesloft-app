@@ -8,6 +8,17 @@ function App() {
       <header className="header">
         <h1>SalesLoft People</h1>
       </header>
+      <section style={{ width: '650px' }}>
+        <table className="people">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+        </table>
+      </section>
     </main>
   );
 }

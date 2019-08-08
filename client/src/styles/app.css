@@ -14,3 +14,13 @@
   font-size: 1.45em;
   color: white;
 }
+
+.people {
+  width: 100%;
+  border: 1px solid hsla(0, 0%, 50%, 0.8);
+}
+
+.people th {
+  color: white;
+  padding: 0.4rem 0;
+}
