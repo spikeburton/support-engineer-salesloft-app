@@ -1,10 +1,12 @@
-language: node_js
-node_js: node
+language: ruby
+rvm:
+- 2.6.3
 before_install:
+- gem install bundler
 - npm install -g npm
 script:
+- echo "Running script..."
 - bundle install
-- npm install
 deploy:
   provider: heroku
   api_key:
