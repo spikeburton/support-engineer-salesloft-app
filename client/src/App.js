@@ -17,7 +17,6 @@ const App = () => {
     <main className="container">
       <header className="header">
         <h1>SalesLoft People</h1>
-        <h2>TESTING</h2>
       </header>
       <section style={{ margin: '0 auto' }}>
         <div
@@ -28,7 +27,7 @@ const App = () => {
         </div>
         {displayFreq && (
           <div>
-            <table className="people">
+            <table className="table-display">
               <thead>
                 <tr>
                   <th>Character</th>
@@ -47,7 +46,7 @@ const App = () => {
           </div>
         )}
         <div>
-          <table className="people">
+          <table className="table-display">
             <thead>
               <tr>
                 <th>Name</th>

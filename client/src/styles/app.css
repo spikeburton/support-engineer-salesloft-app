@@ -25,7 +25,7 @@
   margin-bottom: 0.6rem;
 }
 
-.people {
+.table-display {
   width: 100%;
   color: white;
   font-size: 1em;
@@ -33,24 +33,24 @@
   margin-bottom: 2.5rem;
 }
 
-.people th, td {
+.table-display th, td {
   text-align: left;
   margin: 0;
   padding: 0.5rem;
   border: 1px solid hsla(215, 6%, 41%, 0.8);
 }
 
-.people th {
+.table-display th {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
   background-color: rgb(23, 61, 102);
 }
 
-.people td {
+.table-display td {
   color: hsla(80, 30%, 90%, 0.8);
 }
 
-.people tr:nth-child(even) {
+.table-display tr:nth-child(even) {
   background-color: rgb(27, 73, 122);
 }
 
