@@ -4,8 +4,11 @@
   text-align: center;
   background-color: rgb(70, 142, 193);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   /* justify-content: center; */
 }
@@ -49,4 +52,21 @@
 
 .people tr:nth-child(even) {
   background-color: rgb(27, 73, 122);
+}
+
+#count-button {
+  background-color: hsla(80, 30%, 90%, 0.8);
+  margin: 0 auto 1.8rem;
+  padding: 7px;
+  color: rgb(27, 73, 122);
+  font-weight: bold;
+  width: fit-content;
+  transition: ease 1s;
+  -moz-transition: all ease 1s;
+}
+
+#count-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(23, 61, 102);
 }

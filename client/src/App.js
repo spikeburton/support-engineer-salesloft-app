@@ -5,6 +5,7 @@ import './styles/app.css';
 
 const App = () => {
   const [people, setPeople] = useState([]);
+  const [displayFreq, toggleDisplayFreq] = useState(false);
 
   useEffect(() => {
     fetch('/api/people')
@@ -18,7 +19,32 @@ const App = () => {
         <h1>SalesLoft People</h1>
       </header>
       <section style={{ margin: '0 auto' }}>
-        <div onClick={() => countFrequencies(people)}>PUSH ME</div>
+        <div
+          id="count-button"
+          onClick={() => toggleDisplayFreq(displayFreq ? false : true)}
+        >
+          {displayFreq ? 'Hide ' : 'Show '} Count
+        </div>
+        {displayFreq && (
+          <div>
+            <table className="people">
+              <thead>
+                <tr>
+                  <th>Character</th>
+                  <th>Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                {countFrequencies(people).map((char, i) => (
+                  <tr key={i}>
+                    <td>{char.char}</td>
+                    <td>{char.count}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
         <div>
           <table className="people">
             <thead>

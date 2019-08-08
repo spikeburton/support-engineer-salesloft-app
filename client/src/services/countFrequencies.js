@@ -8,6 +8,7 @@ export const countFrequencies = people => {
   }
 
   // Iterate through each email in the list
+  // This bit runs O(n^2)
   for (let e of emails) {
     // For each email, look at each character
     // Using a hash map, count how often each character appears
@@ -21,7 +22,5 @@ export const countFrequencies = people => {
   const result = Object.keys(freq).map(char => ({ char, count: freq[char] }));
 
   // Finally, sort and return the array by count
-  result.sort((a, b) => b.count - a.count);
-  console.log(result);
-  return result;
+  return result.sort((a, b) => b.count - a.count);
 };
