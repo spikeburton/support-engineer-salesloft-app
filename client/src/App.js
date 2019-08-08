@@ -17,6 +17,7 @@ const App = () => {
     <main className="container">
       <header className="header">
         <h1>SalesLoft People</h1>
+        <h2>TESTING</h2>
       </header>
       <section style={{ margin: '0 auto' }}>
         <div
