@@ -1,11 +1,10 @@
-language: ruby
-rvm:
-- 2.6.3
+language: node_js
+node_js: node
 before_install:
-- gem install bundler
+# - gem install bundler
 - npm install -g npm
 install:
-- bundle install
+# - bundle install
 - npm install --prefix client
 script:
 - echo "Running tests..."
