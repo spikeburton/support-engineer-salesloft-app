@@ -5,10 +5,6 @@ import App from './App';
 import './styles/global.css';
 import * as serviceWorker from './serviceWorker';
 
-// fetch('/api/people')
-//   .then(res => res.json())
-//   .then(console.log);
-
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

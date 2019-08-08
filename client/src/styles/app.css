@@ -1,7 +1,8 @@
 .container {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background-color: #282c34;
+  background-color: rgb(70, 142, 193);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,10 +18,33 @@
 
 .people {
   width: 100%;
-  border: 1px solid hsla(0, 0%, 50%, 0.8);
+  color: white;
+  font-size: 1em;
+  border-collapse: collapse;
+  margin-bottom: 2.5rem;
+}
+
+.people th, td {
+  text-align: left;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid hsla(215, 6%, 41%, 0.8);
 }
 
 .people th {
-  color: white;
-  padding: 0.4rem 0;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  background-color: rgb(23, 61, 102);
+}
+
+.people td {
+  color: hsla(80, 30%, 90%, 0.8);
+}
+
+.people tr:nth-child(even) {
+  background-color: rgb(27, 73, 122);
+}
+
+.people tr:last-child {
+  border-bottom-width: 4px;
 }
