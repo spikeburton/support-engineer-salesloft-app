@@ -1,4 +1,4 @@
-import { countFrequencies } from './services/countFrequencies';
+import { countFrequencies } from '../services/countFrequencies';
 
 it('counts frequencies of a single string', () => {
   const people = [{ email: 'a@b.zz' }];
