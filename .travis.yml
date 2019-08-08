@@ -3,7 +3,7 @@ rvm:
 - 2.6.3
 before_install:
 - npm install -g npm
-install:
+script:
 - bundle install
 - npm install
 deploy:
