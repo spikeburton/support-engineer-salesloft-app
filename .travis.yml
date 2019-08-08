@@ -1,7 +1,4 @@
-language: minimal
-node_js: node
-rvm:
-- 2.6.3
+language: generic
 before_install:
 - rvm install 2.6.3
 - gem install bundler
