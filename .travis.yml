@@ -3,10 +3,12 @@ rvm:
 - 2.6.3
 before_install:
 - gem install bundler
-- npm install -g npm
-script:
-- echo "Running script..."
+# - npm install -g npm
+install:
 - bundle install
+script:
+- echo "Running tests..."
+- bundle exec rspec
 deploy:
   provider: heroku
   api_key:
