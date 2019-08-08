@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.6.3
+before_install:
+- npm install -g npm
+install:
+- bundle install
+- npm install
+deploy:
+  provider: heroku
+  api_key:
+    secure: YcotoMSadk96aMmbLN3XhQDByjkBZ966rGat0TnM82U9PpczOB+bGGMngOi9FIi/SWYDDF+22MItsXPzvhWu/Q592syljnSGZxy5Is3XwGwSuStNyCwuSzXaadEFuLcMaJpGJd4zaU3EN4hQY4owYtJ3WmeYnqGO9lII1WLHDY5e7nYcXAS+akSN20XFTkD0encoUNWAzxi/1J8z90Y97hAoDR3pRl4v3qoX2ek2nkja/Dw4+ddqaRQ2l0DZJtvD7070ioOM6t2LViW4E/sDPtxQFj9jlsGmXsrXXQggVi2hcz1ADTs/MB2ZvgHV0N9gRLevuS5w/xIGXnH0/+iGKfNa/0JcNG7zMAuD5qKvaAONbNM6FfmF3ulgzGEheTTgr/0ybRb8ULdvy1otmWrkQ6tsuuZE/o/qdkO3zXWneTVy/jzx2nKuNj2rLNg7ffebV6GIrgJuQPCoXMNWxip3JzanVly6O/Mb9uRjzrvHDZ+QlNH6PBPrNDf02uX/Tk6WWhnXbobRKdpUNp+/9w+MPVBG1C3WJLaTJ+XxY3ZHsgNPTGwom/DGydmIXNODDHXa2wrEFmeoLq9TI+Z2bzvV4bTPtQnNIVUpOgPQmV7WA3n7+U8jb1sSrFkdkyr5a5eFmWAvTRnD0VINhuWvdWfaJ2oqeuPmUZOze7bJVUcdfZQ=
+  app: support-engineer-spike-burton
+  on:
+    repo: spikeburton/support-engineer-salesloft-app
