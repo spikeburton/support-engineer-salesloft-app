@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { countFrequencies } from './services/countFrequencies';
+import { FrequencyTable } from './components/FrequencyTable';
+import { PeopleTable } from './components/PeopleTable';
 import './styles/app.css';
 
 const App = () => {
@@ -25,46 +26,8 @@ const App = () => {
         >
           {displayFreq ? 'Hide ' : 'Show '} Count
         </div>
-        {displayFreq && (
-          <div>
-            <table className="table-display">
-              <thead>
-                <tr>
-                  <th>Character</th>
-                  <th>Count</th>
-                </tr>
-              </thead>
-              <tbody>
-                {countFrequencies(people).map((char, i) => (
-                  <tr key={i}>
-                    <td>{char.char}</td>
-                    <td>{char.count}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-        <div>
-          <table className="table-display">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Title</th>
-              </tr>
-            </thead>
-            <tbody>
-              {people.map((person, i) => (
-                <tr key={i}>
-                  <td>{person.name}</td>
-                  <td>{person.email}</td>
-                  <td>{person.title}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        {displayFreq && <FrequencyTable people={people} />}
+        <PeopleTable people={people} />
       </section>
     </main>
   );
