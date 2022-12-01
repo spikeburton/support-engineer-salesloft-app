@@ -6,7 +6,7 @@ ruby "2.6.3"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "sinatra", "~> 2.0"
+gem "sinatra", "~> 2.2"
 gem "httparty", "~> 0.17.0"
 
 group :development, :test do
